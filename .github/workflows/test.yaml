@@ -6,6 +6,5 @@ jobs:
   print-file:
     runs-on: self-hosted
     steps:
-      - run: cp ../../helloWorld.md .
       - run: cat helloWorld.md
 
