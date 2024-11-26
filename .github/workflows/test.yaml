@@ -26,4 +26,4 @@ jobs:
     runs-on: [miniHIL_runner]
     steps:
       - name: Flash with JLink
-        run: JFlash.exe -openprj"C:\Program Files\SEGGER\JLink\Default.jflash" -open"C:\Users\scholet\Downloads\release-armclang-static\TS7x_MotorController_MK3.hex" -auto -exit
+        run: JFlash.exe -openprj"C:\Program Files\SEGGER\JLink\Default.jflash" -open"C:\Users\scholet\Downloads\release-armclang-static\TS7x_MotorController_MK3.hex" -auto
