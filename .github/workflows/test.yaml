@@ -6,5 +6,8 @@ jobs:
   print-file:
     runs-on: self-hosted
     steps:
-      - run: pwd
+      - run: 
+        shell: cmd
+        echo %cd%
+
 
