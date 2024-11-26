@@ -2,15 +2,18 @@ name: test
 run-name: ${{ github.actor }} is learning GitHub Actions
 on: push
 
+### use cmd as default shell ###
 defaults:
   run:
     shell: cmd
+  runs-on: [miniHIL_runner]
 
+### begin jobs ###
 jobs:
   #  download-artifact:
   #
+  ### first job "flash" ###
   flash:
-    runs-on: [miniHIL_runner]
     #needs: download-artifact
     steps:
       - name: Build with Gradle
