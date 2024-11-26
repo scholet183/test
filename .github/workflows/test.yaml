@@ -10,7 +10,7 @@ jobs:
   #  download-artifact:
   #
   flash:
-    runs-on: miniHIL_runner
+    runs-on: self-hosted 
     #needs: download-artifact
     steps:
       - name: Setup Gradle
