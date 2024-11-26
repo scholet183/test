@@ -2,12 +2,15 @@ name: test
 run-name: ${{ github.actor }} is learning GitHub Actions
 on: push
 
+defaults:
+  run:
+    shell: cmd
+
 jobs:
   print-file:
     runs-on: self-hosted
     steps:
-      - run: 
-        shell: cmd
-        echo %cd%
+      - run: echo %cd%
+        
 
 
