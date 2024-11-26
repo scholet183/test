@@ -10,7 +10,7 @@ jobs:
   #  download-artifact:
   #
   flash:
-    runs-on: self-hosted
+    runs-on:
       labels: miniHIL_runner
     #needs: download-artifact
     steps:
