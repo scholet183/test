@@ -10,8 +10,7 @@ jobs:
   #  download-artifact:
   #
   flash:
-    runs-on:
-      labels: miniHIL_runner
+    runs-on: [miniHIL_runner]
     #needs: download-artifact
     steps:
       - name: Build with Gradle
