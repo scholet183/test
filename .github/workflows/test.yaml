@@ -7,10 +7,15 @@ defaults:
     shell: cmd
 
 jobs:
-  print-file:
-    runs-on: self-hosted
+  #  download-artifact:
+  #
+  flash:
+    runs-on: [self-hosted, windows, x64, miniHIL_runner]
+    #needs: download-artifact
     steps:
-      - run: echo %cd%
-        
-
-
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
+      - name: Build with Gradle
+        run: ./gradlew build
+      - name: Flash with Gradle
+        run: ./gradlew flash
