@@ -13,12 +13,13 @@ jobs:
     runs-on: self-hosted 
     #needs: download-artifact
     steps:
-      - name: Setup Gradle
-        uses: gradle/actions/setup-gradle@v4
-        with:
-          path:
-            C:\miniHIL\TS7x_MotorController_miniHIL\MiniHilPilot
       - name: Build with Gradle
-        run: ./gradlew build
+        run: |
+          cd C:\miniHIL\TS7x_MotorController_miniHIL\MiniHilPilot
+          .\gradlew.bat build
       - name: Flash with Gradle
-        run: ./gradlew flash
+        run: |
+          cd C:\miniHIL\TS7x_MotorController_miniHIL\MiniHilPilot
+          .\gradlew.bat flash
+
+
