@@ -4,5 +4,9 @@ speed 4000
 jtagconf -1,-1
 connect
 erase
+/* reset */
+r
+/* halt */
+h
 loadfile C:\Users\scholet\Downloads\release-armclang-static\TS7x_MotorController_MK3.hex
 exit
