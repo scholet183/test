@@ -3,3 +3,4 @@ si JTAG
 speed 4000
 jtagconf -1,-1
 connect
+exit
