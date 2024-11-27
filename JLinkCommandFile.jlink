@@ -1,0 +1,5 @@
+device STM32H743XI 
+si JTAG
+speed 4000
+jtagconf -1,-1
+connect
