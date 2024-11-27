@@ -19,9 +19,9 @@ jobs:
           cd C:\miniHIL\TS7x_MotorController_miniHIL\MiniHilPilot
           .\gradlew.bat build
       - name: Flash with Gradle
-        run: |
-         cd C:\miniHIL\TS7x_MotorController_miniHIL\MiniHilPilot
-          .\gradlew.bat flash
+#       run: |
+#         cd C:\miniHIL\TS7x_MotorController_miniHIL\MiniHilPilot
+#         .\gradlew.bat flash
 
   prepare-motorController:
     runs-on: [miniHIL_runner]
