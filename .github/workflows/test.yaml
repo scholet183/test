@@ -16,7 +16,7 @@ jobs:
     steps:
       - name: Build with Gradle
         run: |
-          cd C:\miniHIL\TS7x_MotorController_miniHIL\MiniHilPilot
+          cd c:\minihil\ts7x_motorcontroller_minihil\minihilpilot
           .\gradlew.bat build
 #      - name: Flash with Gradle
 #       run: |
@@ -28,3 +28,11 @@ jobs:
     steps:
       - name: Flash with JLink
         run: JLink.exe -CommandFile C:\test\JLinkCommandFile.jlink
+
+  testing:
+    runs-on: [miniHIL_runner]
+    steps:
+      - name: T1A_12025_Longitudinal_Shift_range_of_motion
+        run: |
+          cd c:\minihil\ts7x_motorcontroller_minihil\minihilpilot
+          .\gradlew.bat runTests "-Ptests=T1A_12025_Longitudinal_Shift_range_of_motion;"
