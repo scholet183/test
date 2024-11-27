@@ -37,4 +37,4 @@ jobs:
       - name: T1A_12025_Longitudinal_Shift_range_of_motion
         run: |
           cd c:\minihil\ts7x_motorcontroller_minihil\minihilpilot
-          .\gradlew.bat runTests "-Ptests=T1A_12025_Longitudinal_Shift_range_of_motion;"
+          .\gradlew.bat runTests "-Ptests=Seq_SetTableToTS7000;T1A_12025_Longitudinal_Shift_range_of_motion;"
