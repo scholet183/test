@@ -11,28 +11,28 @@ defaults:
 ### begin jobs ###
 jobs:
   ### first job "prepare-miniHIL" ###
-  prepare-miniHIL:
-    runs-on: [miniHIL_runner]
-    steps:
-      - name: Build with Gradle
-        run: |
-          cd c:\minihil\ts7x_motorcontroller_minihil\minihilpilot
-          .\gradlew.bat build
+  #  prepare-miniHIL:
+  #    runs-on: [miniHIL_runner]
+  #    steps:
+  #      - name: Build with Gradle
+  #        run: |
+  #          cd c:\minihil\ts7x_motorcontroller_minihil\minihilpilot
+  #          .\gradlew.bat build
 #      - name: Flash with Gradle
 #       run: |
 #         cd C:\miniHIL\TS7x_MotorController_miniHIL\MiniHilPilot
 #         .\gradlew.bat flash
 
-  prepare-motorController:
-    runs-on: [miniHIL_runner]
-    needs: prepare-miniHIL
-    steps:
-      - name: Flash with JLink
-        run: JLink.exe -CommandFile C:\test\JLinkCommandFile.jlink
+          #  prepare-motorController:
+          #    runs-on: [miniHIL_runner]
+          #    needs: prepare-miniHIL
+          #    steps:
+          #      - name: Flash with JLink
+          #        run: JLink.exe -CommandFile C:\test\JLinkCommandFile.jlink
 
   testing:
     runs-on: [miniHIL_runner]
-    needs: [prepare-miniHIL, prepare-motorController]
+    #  needs: [prepare-miniHIL, prepare-motorController]
     steps:
       - name: T1A_12025_Longitudinal_Shift_range_of_motion
         run: |
