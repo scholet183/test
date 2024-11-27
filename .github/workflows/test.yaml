@@ -23,7 +23,7 @@ jobs:
     needs: prepare-miniHIL
     steps:
       - name: Flash with JLink
-        run: JLink.exe -CommandFile C:\test\JLinkCommandFile.jlink
+        run: JLink.exe -CommandFile C:\test\JLinkCommandFile.jlink -NoGui 1
 
   testing:
     runs-on: [miniHIL_runner]
