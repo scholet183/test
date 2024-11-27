@@ -9,4 +9,5 @@ r
 h
 erase 0 0 noreset
 loadfile C:\Users\scholet\Downloads\release-armclang-static\TS7x_MotorController_MK3.hex 0 noreset
+sleep 1000
 exit
