@@ -3,8 +3,5 @@ si JTAG
 speed 4000
 jtagconf -1,-1
 connect
-erase
-sleep 1000
-loadfile C:\Users\scholet\Downloads\release-armclang-static\TS7x_MotorController_MK3.hex
-sleep 1000
+loadfile C:\test\TS7x_MotorController_MK3.hex
 exit
