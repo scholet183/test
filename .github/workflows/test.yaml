@@ -25,6 +25,7 @@ jobs:
 
   prepare-motorController:
     runs-on: [miniHIL_runner]
+    needs: prepare-miniHIL
     steps:
       - name: Flash with JLink
         run: JLink.exe -CommandFile C:\test\JLinkCommandFile.jlink
