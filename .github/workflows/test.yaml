@@ -1,6 +1,7 @@
-name: test 
-run-name: ${{ github.actor }} is learning GitHub Actions
+name: MiniHIl Test 
 on: push
+#  branches:
+#    - tbd
 
 ### use cmd as default shell ###
 defaults:
@@ -19,7 +20,7 @@ jobs:
           .\gradlew.bat build
       - name: Flash with Gradle
         run: |
-          cd C:\miniHIL\TS7x_MotorController_miniHIL\MiniHilPilot
+         cd C:\miniHIL\TS7x_MotorController_miniHIL\MiniHilPilot
           .\gradlew.bat flash
 
   prepare-motorController:
@@ -27,4 +28,3 @@ jobs:
     steps:
       - name: Flash with JLink
         run: JLink.exe -CommandFile C:\test\JLinkCommandFile.jlink
-      #run: JFlash.exe -openprj"C:\Program Files\SEGGER\JLink\Default.jflash" -open"C:\Users\scholet\Downloads\release-armclang-static\TS7x_MotorController_MK3.hex" -auto -min -exit 
