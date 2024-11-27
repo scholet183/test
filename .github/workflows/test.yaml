@@ -31,6 +31,7 @@ jobs:
 
   testing:
     runs-on: [miniHIL_runner]
+    needs: [prepare-miniHIL, prepare-motorController]
     steps:
       - name: T1A_12025_Longitudinal_Shift_range_of_motion
         run: |
