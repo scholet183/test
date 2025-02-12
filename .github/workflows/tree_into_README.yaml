@@ -11,9 +11,9 @@ jobs:
         with:
           token: '${{ secrets.GITHUB_TOKEN }}'
       - run: |
-        sed -i '3,$d' README.md
-        tree >> README.md
-        git add -A
-        git commit -m 'added tree to README.md'
+          sed -i '3,$d' README.md
+          tree >> README.md
+          git add -A
+          git commit -m 'added tree to README.md'
 
 
