@@ -1,0 +1,19 @@
+name: write tree into README
+on: push
+jobs:
+  job:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+      - uses: oleksiyrudenko/gha-git-credentials@v2-latest
+        with:
+          token: '${{ secrets.GITHUB_TOKEN }}'
+      - run: |
+        sed -i '3,$d' README.md
+        tree >> README.md
+        git add -A
+        git commit -m 'added tree to README.md'
+
+
