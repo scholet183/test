@@ -15,5 +15,4 @@ jobs:
           tree >> README.md
           git add -A
           git commit -m 'added tree to README.md'
-
-
+          git push
